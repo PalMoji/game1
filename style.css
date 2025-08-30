@@ -1,0 +1,914 @@
+/* Importing the Doto font from the URL you provided. */
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@900&display=swap');
+
+@font-face {
+    font-family: "Cygnito Mono";
+    src: url("https://cdn.prod.website-files.com/6472a0480700b4ffad5ca638/64762b247fcc87deb90dc047_Cygnito%20Mono.woff2") format("woff2"),
+         url("https://cdn.prod.website-files.com/6472a0480700b4ffad5ca638/64762b3053cc86fc19a84358_Cygnito%20Mono.woff") format("woff"),
+         url("https://cdn.prod.website-files.com/6472a0480700b4ffad5ca638/64762b361c67d1cbe65560f3_Cygnito%20Mono.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{margin: 0;
+padding: 0;
+overflow: hidden;}
+
+.contener{
+   
+}
+
+.wrapper > * {
+  position: relative;
+  top: -140px; 
+}
+
+.wrapper{
+   /* Set a fixed size based on your new 909x722 design */
+   width: 912px;
+   height: 442px;
+   
+   /* Position it so the JavaScript can move it */
+   position: absolute;
+   top: 0;
+   left: 0;
+   
+   /* Keep the transform origin at the top-left for predictable scaling */
+   transform-origin: top left;
+
+   background-image: url(images/bg.png);
+   background-size: cover;
+   opacity: 0; /* Make it invisible by default */
+   transition: opacity 0.1s ease-in-out; /* Add a smooth fade-in effect */   
+}
+
+.button-blok{
+   position: relative;
+}
+
+.button {
+    width: 52px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    position: absolute;
+}
+
+.button pre {
+    font-family: 'Doto', monospace;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 0.8;
+    color: #000;
+    text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    margin: 0;
+    pointer-events: none; 
+}
+
+.button:focus,
+.button:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+.button.down {
+    color: #333;
+    transform: translateY(1px);
+}
+.button:hover{
+  cursor: pointer;
+}
+
+.button-blok>.button:nth-child(1){
+   top: 426px;
+   left: 37px;
+}
+.button-blok>.button:nth-child(2){
+   top: 512px;
+   left:  37px;
+}
+.button-blok>.button:nth-child(3){
+   top: 426px;
+   left: 826px;
+}
+.button-blok>.button:nth-child(4){
+   top: 512px;
+   left: 826px;
+}
+
+.gamemode-button-blok {
+    position: absolute;
+    top: 35px;
+    left: 805px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.control-button-blok {
+    position: absolute;
+    top: 35px;
+    left: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.ascii-button {
+    font-family: 'Doto', monospace;
+    font-weight: 900;
+    color: black;
+    font-size: 18px;
+    line-height: 1;
+    margin: 0;
+	letter-spacing: 1px;
+    -webkit-text-stroke: 1.6px black;
+    text-stroke: 1.6px black; 
+    cursor: pointer;
+    user-select: none;
+    white-space: pre;
+}
+
+.ascii-button.down {
+    color: #555;
+    transform: translateY(1px) translateX(1px);
+}
+.palz{
+   position: relative;
+}
+
+.palz-el{
+   display: none; 
+   justify-content: center;
+   align-items: center;
+}
+
+.palz-el.active{
+   display: flex;
+}
+
+.palz-el pre {
+   font-family: 'Doto', monospace;
+   font-weight: 900;
+   font-size: 34px;
+   line-height: 0.9;
+   color: black;
+   margin: 0;
+   text-align: center;
+   text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.palz>div:nth-child(2) pre {
+   transform: scaleX(-1);
+}
+
+.palz>div{
+   position: absolute;
+   background-size: cover;
+}
+.palz>div:nth-child(1){
+   top: 310px;
+   left: 353px;
+   width: 91px;
+   height: 203px;
+}
+.palz>div:nth-child(2){
+   top: 314px;
+   left: 468.5px;
+   width: 85px;
+   height: 193px;
+}
+.basket{
+   position: relative;
+}
+.basket-el{
+   display: none;
+}
+.basket-el.active{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.basket-el pre {
+   font-family: 'Doto', monospace;
+   font-weight: 900;
+   color: black;
+   font-size: 14px;
+   line-height: 1;
+   margin: 0;
+   -webkit-text-stroke: 2px black; /* Add this line */
+   text-stroke: 2px black; 
+}
+
+.basket>div{
+   position: absolute;
+   background-size: cover;
+}
+.basket>div:nth-child(1){
+   top: 306px;
+   left: 348px;
+   width: 74px;
+   height: 103px;
+}
+.basket>div:nth-child(2){
+   top: 409px;
+   left: 317px;
+   width: 74px;
+   height: 90px;
+}
+.basket>div:nth-child(3){
+   top: 313px;
+   left: 623px;
+   width: 63px;
+   height: 88px;
+}
+.basket>div:nth-child(4){
+   top: 413px;
+   left: 620.5px;
+   width: 71px;
+   height: 82px;
+}
+.egg_blok_1{
+   position: relative;
+}
+.egg {
+    /* Essential positioning properties */
+    position: absolute;
+    display: none;
+
+    /* Text styling for the ASCII art */
+    font-family: 'Doto', monospace;
+    font-weight: 900;
+    color: black;
+    font-size: 7px;
+    line-height: 0.9;
+    text-shadow: 0.5px 0 #000, -0.5px 0 #000, 0 0.5px #000, 0 -0.5px #000;
+    -webkit-text-stroke: 0.3px black; /* Add this line */
+    text-stroke: 0.3px black;         /* And this line */	
+}
+.egg.active{
+   display: block;
+}
+.egg_blok_0>pre:nth-child(1){
+   top: 276px;
+   left: 174px;
+   transform: scale(1.9) rotate(58deg);
+}
+.egg_blok_0>pre:nth-child(2){
+   top: 290px;
+   left: 186px;
+   transform: scale(1.9) rotate(-160deg);
+}
+.egg_blok_0>pre:nth-child(3){
+   top: 296px;
+   left: 220px;
+   transform: scale(1.9) rotate(0deg);
+}
+.egg_blok_0>pre:nth-child(4){
+   top: 314px;
+   left: 244px;
+   transform: scale(1.9) rotate(70deg);
+}
+.egg_blok_0>pre:nth-child(5){
+   top: 334px;
+   left: 264px;
+   transform: scale(1.9) rotate(160deg);
+}
+
+.egg_blok_1>pre:nth-child(1){
+   top: 379px;
+   left: 166px;
+   transform: scale(1.9) rotate(177deg);
+}
+.egg_blok_1>pre:nth-child(2){
+   top: 384px;
+   left: 183px;
+   transform: scale(1.9) rotate(-126deg);
+}
+.egg_blok_1>pre:nth-child(3){
+   top: 402px;
+   left: 220px;
+   transform: scale(1.9) rotate(83deg);
+}
+.egg_blok_1>pre:nth-child(4){
+   top: 407px;
+   left: 244px;
+   transform: scale(1.9) rotate(-12deg);
+}
+.egg_blok_1>pre:nth-child(5){
+   top: 433px;
+   left: 271px;
+   transform: scale(1.9) rotate(81deg);
+}
+
+.egg_blok_2>pre:nth-child(1){
+   top: 268px;
+   left: 732px;
+   transform: scale(1.9) rotate(58deg);
+}
+.egg_blok_2>pre:nth-child(2){
+   top: 279px;
+   left: 708px;
+   transform: scale(1.9) rotate(7deg);
+}
+.egg_blok_2>pre:nth-child(3){
+   top: 292px;
+   left: 682px;
+   transform: scale(1.9) rotate(-22deg);
+}
+.egg_blok_2>pre:nth-child(4){
+   top: 304px;
+   left: 652px;
+   transform: scale(1.9) rotate(-70deg);
+}
+.egg_blok_2>pre:nth-child(5){
+   top: 331px;
+   left: 623px;
+   transform: scale(1.9) rotate(203deg);
+}
+
+.egg_blok_3>pre:nth-child(1){
+   top: 374px;
+   left: 727px;
+   transform: scale(1.9) rotate(125deg);
+}
+.egg_blok_3>pre:nth-child(2){
+   top: 379px;
+   left: 698px;
+   transform: scale(1.9) rotate(-144deg);
+}
+.egg_blok_3>pre:nth-child(3){
+   top: 401px;
+   left: 676px;
+   transform: scale(1.9) rotate(158deg);
+}
+.egg_blok_3>pre:nth-child(4){
+   top: 402px;
+   left: 651px;
+   transform: scale(1.9) rotate(-79deg);
+}
+.egg_blok_3>pre:nth-child(5){
+   top: 427px;
+   left: 624px;
+   transform: scale(1.9) rotate(-139deg);
+}
+
+.chicken_blok_left{
+   position: relative;
+}
+.chicken{
+   background-size: cover;
+   position: absolute;
+   display: none;
+}
+.chicken.active{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.chicken pre {
+    font-family: 'Doto', monospace;
+    font-weight: 900;
+    color: black;
+    font-size: 13px;
+    line-height: 1;
+    margin: 0;
+    -webkit-text-stroke: 1.8px black;
+    text-stroke: 1.8px black; 
+}
+
+.chicken_blok_left>div:nth-child(1) {
+    font-family: 'Doto', monospace;
+    font-weight: 900;
+    color: black;
+    font-size: 26px;
+    line-height: 1;
+    margin: 0;
+    -webkit-text-stroke: 1.8px black;
+    text-stroke: 1.8px black;
+    top: 518px;
+    left: 250px;
+    width: 69px;
+    height: 50px;
+}
+.chicken_blok_left>div:nth-child(2){
+   top: 456px;
+   left: 320px;
+   width: 41px;
+   height: 58px;
+}
+.chicken_blok_left>div:nth-child(3){
+   top: 492px;
+   left: 277px;
+   width: 22px;
+   height: 43px;
+}
+.chicken_blok_left>div:nth-child(4){
+   top: 492px;
+   left: 260px;
+   width: 24px;
+   height: 39px;
+}
+.chicken_blok_left>div:nth-child(5){
+   top: 492px;
+   left: 234px;
+   width: 24px;
+   height: 41px;
+}
+
+.chicken_blok_right>div:nth-child(1){
+    font-family: 'Doto', monospace;
+    font-weight: 900;
+    color: black;
+    font-size: 26px;
+    line-height: 1;
+    margin: 0;
+    -webkit-text-stroke: 1.8px black;
+    text-stroke: 1.8px black;	
+    top: 516px;
+    left: 592px;
+    width: 69px;
+    height: 53px;
+}
+.chicken_blok_right>div:nth-child(2){
+   top: 456px;
+   left: 730px;
+   width: 41px;
+   height: 49px;
+}
+.chicken_blok_right>div:nth-child(3){
+   top: 492px;
+   left: 762px;
+   width: 21px;
+   height: 43px;
+}
+.chicken_blok_right>div:nth-child(4){
+   top: 492px;
+   left: 798px;
+   width: 23px;
+   height: 41px;
+}
+.chicken_blok_right>div:nth-child(5){
+   top: 492px;
+   left: 834px;
+   width: 23px;
+   height: 43px;
+}
+
+.game_blok{
+   position: relative;
+}
+.game{
+   background-size: cover;
+   position: absolute;
+   display: none;
+}
+.game.active{
+   display: block;
+}
+
+.game pre {
+   font-family: 'Doto', monospace;
+   font-weight: 900;
+   color: black;
+   font-size: 21px;
+   line-height: 0.9;
+   letter-spacing: 3px;
+   margin: 0;
+   -webkit-text-stroke: 1.6px black;
+   text-stroke: 1.6px black;
+}
+
+.game_blok>div:nth-child(1){
+   top: 557px;
+   left: 145px;
+   width: 63px;
+   height: 22px;
+}
+.game_blok>div:nth-child(2){
+   top: 557px;
+   left: 677px;
+   width: 61px;
+   height: 22px;
+}
+.bart{
+   display: none;
+   position: absolute;
+   top: 16px;
+   left: 246px;
+   width: 73px;
+   height: 119px;
+}
+.bart.active{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.bart pre {
+   font-family: 'Doto', monospace;
+   font-weight: 900;
+   color: black;
+   font-size: 9.3px;
+   line-height: 0.9;
+   margin: 0;
+   -webkit-text-stroke: 2.4px black;
+   text-stroke: 2.4px black;
+}
+
+.egg_broken_blok{
+   position: relative;
+}
+.egg_broken{
+   background-size: cover;
+   position: absolute;
+   display: none;
+}
+.egg_broken.active{
+   display: block;
+}
+.egg_broken.anime{
+   display: block;
+   animation: nev 1s infinite alternate;
+}
+@keyframes nev {
+   from {
+   opacity: 0.1;
+   }
+   to {
+   opacity: 1;
+   }
+}
+
+.egg_broken pre {
+   font-family: 'Doto', monospace;
+   font-weight: 900;
+   color: black;
+   font-size: 14px;
+   line-height: 0.9;
+   margin: 0;
+   -webkit-text-stroke: 1.8px black; /* Add this line */
+   text-stroke: 1.8px black; 
+}
+
+.egg_broken_blok>div:nth-child(1){
+   top: 243px;
+   left: 574px;
+   width: 30px;
+   height: 47px;
+}
+.egg_broken_blok>div:nth-child(2){
+   top: 243px;
+   left: 532px;
+   width: 30px;
+   height: 47px;
+}
+.egg_broken_blok>div:nth-child(3){
+   top: 243px;
+   left: 490px;
+   width: 30px;
+   height: 47px;
+}
+
+.blok-blok-z{
+   position: absolute;
+   top: 34px;
+   left: 433px; 
+   width: 165px; 
+   height: 69px;
+}
+
+.blok-z{
+   position: absolute;
+   width: 26px;
+   height: 69px;
+}
+/* Rightmost digit */
+.blok-blok-z>div:nth-child(1){
+   top: 0;
+   left: 139px;
+}
+.blok-blok-z>div:nth-child(2){
+   top: 0;
+   left: 97px;
+}
+.blok-blok-z>div:nth-child(3){
+   top: 0;
+   left: 55px;
+}
+/* Leftmost digit */
+.blok-blok-z>div:nth-child(4){
+   top: 0;
+   left: 11px;
+}
+   
+.z-el {
+    /* Base style for all ASCII segments */
+    position: absolute;
+    display: none; /* Hidden by default */
+    font-family: 'Doto', monospace;
+    font-weight: 900;
+    font-size: 20px;
+    color: black;
+    line-height: 0.9;
+    margin: 0;
+    -webkit-text-stroke: 2px black; /* Add this line */
+    text-stroke: 2px black;         /* And this line */   
+    text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;	
+}
+
+.z-el.active {
+    display: block; /* The JS will toggle this to show a segment */
+}
+
+/* --- Positioning for each of the 7 segments --- */
+
+/* Top horizontal segment */
+.z-el-2 {
+    top: -10px;
+    left: 10px;
+}
+
+/* Middle horizontal segment */
+.z-el-4 {
+    top: 10px;
+    left: 10px;
+}
+
+/* Bottom horizontal segment */
+.z-el-7 {
+    top: 30px;
+    left: 10px;
+}
+
+/* Top-left vertical segment */
+.z-el-1 {
+    top: 8px;
+    left: 0px;
+}
+
+/* Bottom-left vertical segment */
+.z-el-5 {
+    top: 28px;
+    left: 0px;
+}
+
+/* Top-right vertical segment */
+.z-el-3 {
+    top: 8px;
+    left: 20px;
+}
+
+/* Bottom-right vertical segment */
+.z-el-6 {
+    top: 28px;
+    left: 20px;
+}
+
+
+.share-modal-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    /* Responsive size that maintains the 660x428 ratio */
+    width: 72.3%;  /* (660px / 912px wrapper width) */
+    aspect-ratio: 660 / 428;
+
+    /* A backdrop filter to blur the game content behind the modal */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    
+    /* A subtle overlay to make text readable */
+    background-color: rgba(255, 255, 255, 0.5); 
+    
+    border: 1px solid black;
+}
+
+.modal-inner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 5%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-title {
+    font-family: "Cygnito Mono", monospace; /* <-- UPDATED FONT */
+    font-weight: 900;
+    color: black;
+    font-size: 28px;
+    margin: 0;
+}
+
+/* 3. Style the close button correctly */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+    border: 2px solid #000;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.close-button:hover {
+    background-color: black;
+}
+
+.close-icon-text {
+    font-family: "Cygnito Mono", monospace; /* Using the new font */
+    font-size: 48px;
+    color: black;
+    line-height: 1;
+}
+
+.close-button:hover .close-icon-text {
+    color: white;
+}
+
+/* This is the container for the icons */
+.share-icons {
+    display: flex;
+    justify-content: center; /* This centers the group of icons */
+    align-items: center;     /* This aligns them vertically */
+    width: 50%;
+    gap: 5%;                /* A responsive gap between icons */
+}
+
+/* This targets the link wrapper around each icon */
+.share-icons a {
+    display: flex;           /* CRITICAL: Makes the link a flex container */
+    justify-content: center; /* CRITICAL: Centers the SVG inside the link */
+    align-items: center;     /* CRITICAL: Aligns the SVG vertically */
+    color: black;
+    transition: transform 0.2s ease;
+}
+
+.share-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* This styles the SVG icon itself */
+.share-icons svg {
+    width: 88%; /* A slightly larger, responsive size */
+    height: auto;
+    fill: currentColor;
+}
+
+.save-confirmation-message {
+    display: none; /* Hidden by default */
+    order: -1; /* Places this element first in the flex container */
+    padding-bottom: 15px; /* Adds space between the message and the title */
+    font-family: "Cygnito Mono", monospace;
+    font-weight: 900;
+    font-size: 22px;
+    color: #000; /* A dark green for the success message */
+    margin: 0;
+}
+
+#menu-modal .modal-inner-content {
+    justify-content: space-between;
+    height: 100%; /* Ensure the container takes full height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Accordion Styles */
+.accordion {
+    width: 80%;
+    overflow-y: auto; /* This is the critical line that adds the scrollbar when needed. */
+    flex-shrink: 1;   /* This allows the accordion to shrink and not push other elements. */
+}
+
+.accordion-item {
+    border-bottom: 1px solid #000;
+}
+
+.accordion-item:first-child {
+    border-top: 1px solid #000;
+}
+
+.accordion-header {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-family: "Cygnito Mono", monospace;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;	
+}
+
+.accordion-arrow {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #000; /* This creates the down arrow */
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-arrow {
+    transform: rotate(180deg); /* Flips the arrow up */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 15px;
+    font-family: "Cygnito Mono", monospace;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.accordion-content > *:last-child {
+    margin-bottom: 15px;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+}
+
+/* --- Custom Scrollbar for Accordion --- */
+
+.accordion::-webkit-scrollbar-track
+{
+	border: 1px solid black;
+	background-color: #F5F5F5;
+}
+
+.accordion::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.accordion::-webkit-scrollbar-thumb
+{
+	background-color: #000000;	
+}
+
+#open-share-from-menu {
+    font-family: "Cygnito Mono", monospace;
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+}
+
+#open-share-from-menu:hover {
+    opacity: 0.8;
+}
+
+/* Exit Button Styles */
+.exit-button {
+    font-family: "Cygnito Mono", monospace;
+    font-size: 20px;
+    font-weight: 900;
+    background: transparent;
+    border: 2px solid #000;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 20px;
+}
+
+.exit-button:hover {
+    background: #000;
+    color: #fff;
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>PalMoji Game</title>
+</head>
+<body>
+      <div class="contener">
+         <div class="wrapper">
+<div class="button-blok">
+    <div class="button" date="0">
+        <pre>
+   __
+  (__)
+        </pre>
+    </div>
+    <div class="button" date="1">
+        <pre>
+   __
+  (__)
+        </pre>
+    </div>
+    <div class="button" date="2">
+        <pre>
+   __
+  (__)
+        </pre>
+    </div>
+    <div class="button" date="3">
+        <pre>
+   __
+  (__)
+        </pre>
+    </div>
+</div>
+            
+            <div class="palz">
+               <div class="palz-el" date="0">
+<pre>
+@~~~@
+(o o)
+(I)
+(\:/)
+(")(")
+</pre>
+               </div>
+               <div class="palz-el" date="1">
+<pre>
+@~~~@
+(o o)
+(I)
+(\:/)
+(")(")
+</pre>
+               </div>
+            </div>
+
+            <div class="basket">
+               <div class="basket-el"><pre>
+   __			   
+  /  \
+ /____\
+(WWWWWW)
+ \WWWW/
+  \WW/
+</pre></div>
+               <div class="basket-el"><pre>
+   __		   
+  /  \   
+ /____\
+(WWWWWW)
+ \WWWW/
+  \WW/
+</pre></div>
+               <div class="basket-el"><pre>
+   __		   
+  /  \   
+ /____\
+(WWWWWW)
+ \WWWW/
+  \WW/
+</pre></div>
+               <div class="basket-el"><pre>
+   __		   
+  /  \   
+ /____\
+(WWWWWW)
+ \WWWW/
+  \WW/
+</pre></div>
+            </div>
+            
+            <div class="chicken_blok_left">
+<div class="chicken">
+(;X;)
+</div>
+               <div class="chicken"><pre>
+  w			   
+ &lt;o)
+(/\)
+ " "
+</pre></div>
+               <div class="chicken"><pre>
+ w		   
+&lt;o)
+(/\)
+" "
+</pre></div>
+               <div class="chicken"><pre>
+  w			   
+ &lt;o)
+(/\)
+ " "
+</pre></div>
+               <div class="chicken"><pre>
+ w			   
+&lt;o)
+(/\)
+" "
+</pre></div>
+            </div>
+
+            <div class="chicken_blok_right">
+<div class="chicken">
+(;X;)
+</div>
+               <div class="chicken"><pre>
+ w			   
+(o>
+(/\)
+" " 			   
+</pre></div>
+               <div class="chicken"><pre>
+  w			   
+ (o>
+(/\)
+ " " 			   
+</pre></div>
+               <div class="chicken"><pre>
+ w			   
+(o>
+(/\)
+" "			   
+</pre></div>
+               <div class="chicken"><pre>
+  w			   
+ (o>
+(/\)
+ " "			   
+</pre></div>
+            </div>
+            <div class="game_blok">
+               <div class="game"><pre>
+GAME A			   
+</pre></div>
+               <div class="game"><pre>
+GAME B			   
+</pre></div>
+            </div>
+            <div class="bart"><pre>
+  |\/\/\/\/\|
+  |         |
+  |         |
+  |         |
+  |   __  __|
+  |  /  \/  \
+  | (o  )o  )
+ /C  \__/ --,
+ \_       --\
+  |  \_______)
+  |      _)
+  |     |
+ /`-----'\
+/         \
+</pre></div>
+            <div class="egg_broken_blok">
+               <div class="egg_broken"><pre>
+ w			   
+(o>
+(=)
+" "				   
+</pre></div>
+               <div class="egg_broken"><pre>
+ w			   
+(o>
+(=)
+" "				   
+</pre></div>
+               <div class="egg_broken"><pre>
+ w			   
+(o>
+(=)
+" "				   
+</pre></div>
+            </div>
+           
+
+            <div id="share-modal" class="share-modal-content">
+               <button id="close-modal-button" class="close-button" aria-label="Close">
+                  <span class="close-icon-text">&#215;</span>
+               </button>
+               <div class="modal-inner-content">
+                 <h2 class="modal-title">SHARE YOUR SCORE</h2>
+				 <div id="save-confirmation" class="save-confirmation-message">
+                    <p>
+                        By clicking the <strong>Share Icon</strong>, you can use your device's native sharing feature to share your text score, a link to the game, and an image of your score. Please be aware that this function may not be supported by all devices and browsers.
+                    </p>
+                    <p>
+                        As an alternative, you can:
+                    </p>
+                    <ul>
+                        <li>Click <strong>X, Farcaster, or Telegram</strong> to automatically create a post with your text score and a link for those platforms.</li>
+                        <li>Click the <strong>Save Icon</strong> to download an image of your score to your device. You can then add this image to your posts.</li>
+                        <li>Click the <strong>Copy Icon</strong> to copy your text score and link to the clipboard. You can then paste this into your post and attach the saved score image.</li>
+                    </ul>
+                 </div>
+                 <div class="share-icons">
+					<a id="share-generic" href="#" title="Share">
+						<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Share</title>
+							<path fill="none" d="M8.59 13.51L15.42 17.49M15.41 6.51L8.59 10.49M21 5C21 6.65685 19.6569 8 18 8C16.3431 8 15 6.65685 15 5C15 3.34315 16.3431 2 18 2C19.6569 2 21 3.34315 21 5ZM9 12C9 13.6569 7.65685 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.65685 9 9 10.3431 9 12ZM21 19C21 20.6569 19.6569 22 18 22C16.3431 22 15 20.6569 15 19C15 17.3431 16.3431 16 18 16C19.6569 16 21 17.3431 21 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+                    <a id="share-x" href="#" title="Share on X">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                    </a>
+                    <a id="share-farcaster" href="#" title="Share on Farcaster">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Farcaster</title><path d="M18.24.24H5.76C2.5789.24 0 2.8188 0 6v12c0 3.1811 2.5789 5.76 5.76 5.76h12.48c3.1812 0 5.76-2.5789 5.76-5.76V6C24 2.8188 21.4212.24 18.24.24m.8155 17.1662v.504c.2868-.0256.5458.1905.5439.479v.5688h-5.1437v-.5688c-.0019-.2885.2576-.5047.5443-.479v-.504c0-.22.1525-.402.358-.458l-.0095-4.3645c-.1589-1.7366-1.6402-3.0979-3.4435-3.0979-1.8038 0-3.2846 1.3613-3.4435 3.0979l-.0096 4.3578c.2276.0424.5318.2083.5395.4648v.504c.2863-.0256.5457.1905.5438.479v.5688H4.3915v-.5688c-.0019-.2885.2575-.5047.5438-.479v-.504c0-.2529.2011-.4548.4536-.4724v-7.895h-.4905L4.2898 7.008l2.6405-.0005V5.0419h9.9495v1.9656h2.8219l-.6091 2.0314h-.4901v7.8949c.2519.0177.453.2195.453.4724"/></svg>
+                    </a>
+                    <a id="share-telegram" href="#" title="Share on Telegram">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </a>
+					<a id="share-copy" href="#" title="Copy to clipboard">
+						<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Copy</title>
+							<path fill="none" d="M8 16V18.8C8 19.9201 8 20.4802 8.21799 20.908C8.40973 21.2843 8.71569 21.5903 9.09202 21.782C9.51984 22 10.0799 22 11.2 22H18.8C19.9201 22 20.4802 22 20.908 21.782C21.2843 21.5903 21.5903 21.2843 21.782 20.908C22 20.4802 22 19.9201 22 18.8V11.2C22 10.0799 22 9.51984 21.782 9.09202C21.5903 8.71569 21.2843 8.40973 20.908 8.21799C20.4802 8 19.9201 8 18.8 8H16M5.2 16H12.8C13.9201 16 14.4802 16 14.908 15.782C15.2843 15.5903 15.5903 15.2843 15.782 14.908C16 14.4802 16 13.9201 16 12.8V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H5.2C4.0799 2 3.51984 2 3.09202 2.21799C2.71569 2.40973 2.40973 2.71569 2.21799 3.09202C2 3.51984 2 4.07989 2 5.2V12.8C2 13.9201 2 14.4802 2.21799 14.908C2.40973 15.2843 2.71569 15.5903 3.09202 15.782C3.51984 16 4.07989 16 5.2 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+					<a id="save-score" href="#" title="Save Score">
+						<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Save</title>
+							<path fill="none" d="M7 3V6.4C7 6.96005 7 7.24008 7.10899 7.45399C7.20487 7.64215 7.35785 7.79513 7.54601 7.89101C7.75992 8 8.03995 8 8.6 8H15.4C15.9601 8 16.2401 8 16.454 7.89101C16.6422 7.79513 16.7951 7.64215 16.891 7.45399C17 7.24008 17 6.96005 17 6.4V4M17 21V14.6C17 14.0399 17 13.7599 16.891 13.546C16.7951 13.3578 16.6422 13.2049 16.454 13.109C16.2401 13 15.9601 13 15.4 13H8.6C8.03995 13 7.75992 13 7.54601 13.109C7.35785 13.2049 7.20487 13.3578 7.10899 13.546C7 13.7599 7 14.0399 7 14.6V21M21 9.32548V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V7.8C3 6.11984 3 5.27976 3.32698 4.63803C3.6146 4.07354 4.07354 3.6146 4.63803 3.32698C5.27976 3 6.11984 3 7.8 3H14.6745C15.1637 3 15.4083 3 15.6385 3.05526C15.8425 3.10425 16.0376 3.18506 16.2166 3.29472C16.4184 3.4184 16.5914 3.59135 16.9373 3.93726L20.0627 7.06274C20.4086 7.40865 20.5816 7.5816 20.7053 7.78343C20.8149 7.96237 20.8957 8.15746 20.9447 8.36154C21 8.59171 21 8.8363 21 9.32548Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+                 </div>
+               </div>
+            </div>		   
+
+            <div id="menu-modal" class="share-modal-content">
+               <button id="close-menu-modal-button" class="close-button" aria-label="Close">
+                  <span class="close-icon-text">&#215;</span>
+               </button>
+               <div class="modal-inner-content">
+                 <div class="accordion">
+                    <div class="accordion-item">
+					<button class="accordion-header">
+						GAME GUIDE
+						<span class="accordion-arrow"></span>
+					</button>
+                        <div class="accordion-content">
+                            <p><strong>Welcome to The PalMoji Game!</strong></p>
+                            <p>Inspired by the classic Nintendo Game & Watch series, The PalMoji Game is a test of skill and reflexes. This game is designed to sharpen your attention, train your reaction speed, and develop your logical thinking. To win, you must learn to anticipate the action and make the right decision every time.</p>
+                            
+                            <p><strong>How to Play</strong></p>
+                            <p>The goal is simple: catch as many eggs as you can! Control your PalMoji's movement and the position of its basket to catch eggs as they fall from the trays above.<br>You can play using:</p>
+                            <ul>
+                                <li>On-screen buttons on your mobile device.</li>
+                                <li>Keyboard arrow keys.</li>
+                                <li>Specific keyboard keys:
+                                    <ul>
+                                        <li>Q: Top-Left</li>
+                                        <li>S: Bottom-Left</li>
+                                        <li>P: Top-Right</li>
+                                        <li>L: Bottom-Right</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p><strong>Scoring and Penalties</strong></p>
+                            <ul>
+                                <li><strong>Penalty Points:</strong> If you miss an egg, it will fall and break. For each broken egg, you receive one penalty point, which appears as a chick on the screen.</li>
+                                <li><strong>Special Bonus:</strong> If an egg breaks while Bart appears in the window of the little house, you only receive half a penalty point (the chick image will flash).</li>
+                                <li><strong>Game Over:</strong> The game ends when you accumulate three full penalty points.</li>
+                                <li><strong>Clearing Penalties:</strong> As you prove your skill, your mistakes are forgiven! Within each block of 1,000 points, your penalties will be cleared when your score reaches the 200 and 500 marks (e.g., at 200, 500, 1200, 1500, 2200, 2500, and so on), announced by a rewarding sound.</li>
+                            </ul>
+
+                            <p><strong>Rewards and Recognition</strong></p>
+                            <p>Your skill doesn't go unnoticed! The PalMoji Game rewards dedicated players in several ways:</p>
+                            <ul>
+                                <li><strong>Global Scoreboard:</strong> See how you stack up against players from around the world. Climb the ranks and fight for the top spot!</li>
+                                <li><strong>Achievement Badges:</strong> Unlock special badges for completing challenges and reaching milestones. Earn recognition for high scores, perfect rounds, and consistent daily play.</li>
+                                <li><strong>Crypto Rewards:</strong> Turn your skills into assets! Top players on the leaderboard and those who conquer special in-game challenges will have the opportunity to earn cryptocurrency rewards, adding a true Play-to-Earn dimension to your gaming experience.</li>
+                            </ul>
+
+                            <p><strong>Game Modes & Difficulty</strong></p>
+                            <ul>
+                                <li><strong>Increasing Challenge:</strong> The more points you score, the faster and more challenging the game becomes.</li>
+                                <li><strong>Game A (Standard):</strong> In this mode, eggs will fall from a maximum of three trays at once.</li>
+                                <li><strong>Game B (Expert):</strong> For a true challenge, this mode features eggs falling from all four trays simultaneously.</li>
+                                <li><strong>Max Score:</strong> The ultimate goal is to reach the maximum score of 9,999. Can you achieve it?</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+					<button class="accordion-header">
+						SHARE
+						<span class="accordion-arrow"></span>
+					</button>
+                        <div class="accordion-content">
+                            <p>
+                                By clicking the <strong>Share Icon</strong> <svg style="display: inline-block; vertical-align: middle; width: 1.2em; height: 1.2em;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Share</title><path fill="none" d="M8.59 13.51L15.42 17.49M15.41 6.51L8.59 10.49M21 5C21 6.65685 19.6569 8 18 8C16.3431 8 15 6.65685 15 5C15 3.34315 16.3431 2 18 2C19.6569 2 21 3.34315 21 5ZM9 12C9 13.6569 7.65685 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.65685 9 9 10.3431 9 12ZM21 19C21 20.6569 19.6569 22 18 22C16.3431 22 15 20.6569 15 19C15 17.3431 16.3431 16 18 16C19.6569 16 21 17.3431 21 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>, you can use your device's native sharing feature to share your text score, a link to the game, and an image of your score. Please be aware that this function may not be supported by all devices and browsers.
+                            </p>
+                            <p>
+                                As an alternative, you can:
+                            </p>
+                            <ul>
+                                <li>Click <strong>X</strong> <svg style="display: inline-block; vertical-align: middle; width: 1.2em; height: 1.2em;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>, 
+								<strong>Farcaster</strong> <svg style="display: inline-block; vertical-align: middle; width: 1.2em; height: 1.2em;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Farcaster</title><path d="M18.24.24H5.76C2.5789.24 0 2.8188 0 6v12c0 3.1811 2.5789 5.76 5.76 5.76h12.48c3.1812 0 5.76-2.5789 5.76-5.76V6C24 2.8188 21.4212.24 18.24.24m.8155 17.1662v.504c.2868-.0256.5458.1905.5439.479v.5688h-5.1437v-.5688c-.0019-.2885.2576-.5047.5443-.479v-.504c0-.22.1525-.402.358-.458l-.0095-4.3645c-.1589-1.7366-1.6402-3.0979-3.4435-3.0979-1.8038 0-3.2846 1.3613-3.4435 3.0979l-.0096 4.3578c.2276.0424.5318.2083.5395.4648v.504c.2863-.0256.5457.1905.5438.479v.5688H4.3915v-.5688c-.0019-.2885.2575-.5047.5438-.479v-.504c0-.2529.2011-.4548.4536-.4724v-7.895h-.4905L4.2898 7.008l2.6405-.0005V5.0419h9.9495v1.9656h2.8219l-.6091 2.0314h-.4901v7.8949c.2519.0177.453.2195.453.4724"/></svg>, or 
+								<strong>Telegram</strong> <svg style="display: inline-block; vertical-align: middle; width: 1.2em; height: 1.2em;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg> to automatically create a post with your text score and a link for those platforms.</li>
+                                <li>Click the <strong>Save Icon</strong> <svg style="display: inline-block; vertical-align: middle; width: 1.2em; height: 1.2em;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Save</title><path fill="none" d="M7 3V6.4C7 6.96005 7 7.24008 7.10899 7.45399C7.20487 7.64215 7.35785 7.79513 7.54601 7.89101C7.75992 8 8.03995 8 8.6 8H15.4C15.9601 8 16.2401 8 16.454 7.89101C16.6422 7.79513 16.7951 7.64215 16.891 7.45399C17 7.24008 17 6.96005 17 6.4V4M17 21V14.6C17 14.0399 17 13.7599 16.891 13.546C16.7951 13.3578 16.6422 13.2049 16.454 13.109C16.2401 13 15.9601 13 15.4 13H8.6C8.03995 13 7.75992 13 7.54601 13.109C7.35785 13.2049 7.20487 13.3578 7.10899 13.546C7 13.7599 7 14.0399 7 14.6V21M21 9.32548V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V7.8C3 6.11984 3 5.27976 3.32698 4.63803C3.6146 4.07354 4.07354 3.6146 4.63803 3.32698C5.27976 3 6.11984 3 7.8 3H14.6745C15.1637 3 15.4083 3 15.6385 3.05526C15.8425 3.10425 16.0376 3.18506 16.2166 3.29472C16.4184 3.4184 16.5914 3.59135 16.9373 3.93726L20.0627 7.06274C20.4086 7.40865 20.5816 7.5816 20.7053 7.78343C20.8149 7.96237 20.8957 8.15746 20.9447 8.36154C21 8.59171 21 8.8363 21 9.32548Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> to download an image of your score to your device. You can then add this image to your posts.</li>
+                            </ul>
+							<p>If the above sharing methods don't work for you, click the <strong>Copy Icon</strong> <svg style="display: inline-block; vertical-align: middle; width: 1.2em; height: 1.2em;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Copy</title> <path fill="none" d="M8 16V18.8C8 19.9201 8 20.4802 8.21799 20.908C8.40973 21.2843 8.71569 21.5903 9.09202 21.782C9.51984 22 10.0799 22 11.2 22H18.8C19.9201 22 20.4802 22 20.908 21.782C21.2843 21.5903 21.5903 21.2843 21.782 20.908C22 20.4802 22 19.9201 22 18.8V11.2C22 10.0799 22 9.51984 21.782 9.09202C21.5903 8.71569 21.2843 8.40973 20.908 8.21799C20.4802 8 19.9201 8 18.8 8H16M5.2 16H12.8C13.9201 16 14.4802 16 14.908 15.782C15.2843 15.5903 15.5903 15.2843 15.782 14.908C16 14.4802 16 13.9201 16 12.8V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H5.2C4.0799 2 3.51984 2 3.09202 2.21799C2.71569 2.40973 2.40973 2.71569 2.21799 3.09202C2 3.51984 2 4.07989 2 5.2V12.8C2 13.9201 2 14.4802 2.21799 14.908C2.40973 15.2843 2.71569 15.5903 3.09202 15.782C3.51984 16 4.07989 16 5.2 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> to copy your text score and link to the clipboard. You can then paste this into your post and attach the saved score image.</p>
+                        </div>
+                    </div>
+                 </div>
+                 <button id="exit-game-button" class="exit-button">EXIT GAME</button>
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>	  
+      <script src="./sc.js"></script>
+</body>
+</html>
